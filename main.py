@@ -44,7 +44,7 @@ def find_mismatch(text):
 
 def main():
     text = input()
-    if text[0]=="I":
+    if text[0]=="i":
         text=input()
         mismatch = find_mismatch(text)
     # Printing answer, write your code here
