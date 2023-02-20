@@ -48,6 +48,10 @@ def main():
         text=input()
         mismatch = find_mismatch(text)
     # Printing answer, write your code here
+        if mismatch==-1:
+            print("Success")
+        else:
+            print(mismatch+1)
 #if (opening_brackets_stack:
    #print(opening_brackets_stack[-1].position)
 #else:
