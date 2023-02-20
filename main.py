@@ -11,23 +11,30 @@ def are_matching(left, right):
 
 def find_mismatch(text):
     opening_brackets_stack = []
+    opening_brackets_position = {}
     for i, next in enumerate(text):
         if next in '([{':
             # Process opening bracket, write your code here)
-            opening_brackets_stack.append(Bracket(next, i+1))
+            #opening_brackets_stack.append(Bracket(next, i+1))
+            opening_brackets_stack.append(next)
+            opening_brackets_position[next]=i+1
             pass
 
        
             # Process closing bracket, write your code here
-        if next in ')]}':
-            opening_brackets_stack.pop():
+        elif next in ')]}':
+            if len(openiing_brackets_stack)==0:
+                return i+1
+            opening_brackets=opening_brackets_stack.pop()
             if (next==')'and opening_brackets != '(') or \
                (next==']'and opening_brackets != '[') or \
                (next=='}'and opening_brackets != '{'):
-                        return i + 1
-    if opening_brackets_stack:
-        return opening_brackets_stack[0].position
-    return "Success"
+                        return i + 1, pening_brackets_position[opening_brackets]
+    if len(opening_brackets_stack)==0:
+        #return opening_brackets_stack[0].position
+        return "Success"
+    else:
+        return opening_brackets_position[opening_brackets_stack.pop()]
             pass
 
 
