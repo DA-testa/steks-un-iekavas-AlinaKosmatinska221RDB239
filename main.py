@@ -33,7 +33,8 @@ def find_mismatch(text):
         #return "Success"
     #else:
         #return opening_brackets_position[opening_brackets_stack.pop()]
-            if opening_brackets_stack==0 or are_matching==0(opening_brackets_stack.pop().char,next):
+            if not opening_brackets_stack | not are_mismatching(opening_brackets_stack.pop().char,next):
+            #if opening_brackets_stack==0 or are_matching==0(opening_brackets_stack.pop().char,next):
                 return i+1
             if opening_brackets_stack:
                 return opening_brackets_stack[0].position
