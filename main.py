@@ -2,7 +2,7 @@
 
 from collections import namedtuple
 
-Bracket = namedtuple("Bracket", ["char", "position"])
+#Bracket = namedtuple("Bracket", ["char", "position"])
 
 
 def are_matching(left, right):
