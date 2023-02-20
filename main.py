@@ -47,10 +47,10 @@ def main():
         text=input()
         mismatch = find_mismatch(text)
     # Printing answer, write your code here
-if (opening_brackets_stack:
-   print(opening_brackets_stack[-1].position)
-else:
-    print("Success")
+#if (opening_brackets_stack:
+   #print(opening_brackets_stack[-1].position)
+#else:
+    print(mismatch)
 
 if __name__ == "__main__":
     main()
