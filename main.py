@@ -12,24 +12,21 @@ def are_matching(left, right):
 def find_mismatch(text):
     opening_brackets_stack = []
     for i, next in enumerate(text):
-            # Process opening bracket, write your code here
-def _init_(self,char,position):
-    self.char=char
-    self.position=position
-            if next == '(' or next == '[' or next '{':
+        if next in '([{':
+            # Process opening bracket, write your code here)
             opening_brackets_stack.append(Bracket(next, i+1))
             pass
 
        
             # Process closing bracket, write your code here
-            def if_statement (next, opening_brackets_stack):
-                if (next == ')' or next == ']' or next '}'):
-                    if (opening_brackets_stack.empty() or
-                          opening_brackets_stack.top().Matchc(next)):
-                        return i + 1
-                    opening_brackets_stack.pop():
-                return opening_brackets_stack[0].position
-            return 'Success'
+        elif next in ')]}':
+            if len(opening_brackets_stack)==0:
+                return i+1
+            opening_brackets_stack.pop():
+            if (next==')'and opening_brackets_stack != '(') or \
+               (next==']'and opening_brackets_stack != '[') or \
+               (next=='}'and opening_brackets_stack != '{'):
+                        return i + 1, opening_bracket_position[opening_bracket_stack]
             pass
 
 
