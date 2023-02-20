@@ -20,13 +20,17 @@ def find_mismatch(text):
        
             # Process closing bracket, write your code here
         elif next in ')]}':
-            if len(opening_brackets_stack)==0:
+            if len(stack)==0:
                 return i+1
             opening_brackets_stack.pop():
-            if (next==')'and opening_brackets_stack != '(') or \
-               (next==']'and opening_brackets_stack != '[') or \
-               (next=='}'and opening_brackets_stack != '{'):
-                        return i + 1, opening_bracket_position[opening_bracket_stack]
+            if (next==')'and opening_brackets != '(') or \
+               (next==']'and opening_brackets != '[') or \
+               (next=='}'and opening_brackets != '{'):
+                        return i + 1, opening_bracket_position[opening_bracket]
+    if len(stack)==0:
+        return "Success"
+    else:
+    return opening_bracket_position[stack.pop()]
             pass
 
 
@@ -39,7 +43,7 @@ def main():
 if (opening_brackets_stack:
    print(opening_brackets_stack[-1].position)
 else:
-    print('Success')
+    print("Success")
 
 if __name__ == "__main__":
     main()
