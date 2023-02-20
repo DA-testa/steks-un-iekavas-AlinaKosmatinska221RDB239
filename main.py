@@ -19,18 +19,15 @@ def find_mismatch(text):
 
        
             # Process closing bracket, write your code here
-        elif next in ')]}':
-            if len(stack)==0:
-                return i+1
+        if next in ')]}':
             opening_brackets_stack.pop():
             if (next==')'and opening_brackets != '(') or \
                (next==']'and opening_brackets != '[') or \
                (next=='}'and opening_brackets != '{'):
-                        return i + 1, opening_bracket_position[opening_bracket]
-    if len(stack)==0:
-        return "Success"
-    else:
-    return opening_bracket_position[stack.pop()]
+                        return i + 1
+    if opening_brackets_stack:
+        return opening_brackets_stack[0].position
+    return "Success"
             pass
 
 
