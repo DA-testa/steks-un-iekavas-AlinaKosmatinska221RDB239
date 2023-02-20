@@ -15,7 +15,7 @@ def find_mismatch(text):
             # Process opening bracket, write your code here)
             opening_brackets_stack.append(Bracket(next, i+1)) #pievieno vienu vērtību
             #opening_brackets_stack.append(next)
-            opening_brackets_position[next]=i+1
+            #opening_brackets_position[next]=i+1
             pass
 
        
